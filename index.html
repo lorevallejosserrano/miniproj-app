@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>App JS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- BREADCRUMB -->
+  <nav id="breadcrumb"></nav>
+
+  <!-- INICIO -->
+  <section id="screen-inicio">
+    <h1>Bienvenida</h1>
+    <button id="btn-comenzar">Comenzar</button>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="screen-proyectos" style="display:none;">
+    <h2>Miniproyectos</h2>
+
+    <button id="btn-reset">Resetear progreso</button>
+
+    <div>
+      <button class="btn-proyecto" data-id="1">Proyecto 1</button>
+      <button class="btn-proyecto" data-id="2">Proyecto 2</button>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section id="screen-mapa" style="display:none;">
+    <h2>Mapa</h2>
+    <div id="lista-etapas">
+      <button class="btn-etapa" data-id="1">Etapa 1</button>
+      <button class="btn-etapa" data-id="2">Etapa 2</button>
+    </div>
+  </section>
+
+  <!-- IDE -->
+  <section id="screen-ide" style="display:none;">
+    <h2>IDE</h2>
+
+    <p id="instruccion"></p>
+    <textarea id="editor-html" placeholder="HTML"></textarea>
+    <textarea id="editor-css" placeholder="CSS"></textarea>
+    <textarea id="editor-js" placeholder="JavaScript"></textarea>
+
+    <button id="btn-ejecutar">Ejecutar</button>
+
+    <iframe id="preview"></iframe>
+
+    <button id="btn-validar">Validar</button>
+    <p id="resultado"></p>
+    <button id="btn-volver">Volver</button>
+  </section>
+
+  <script src="js/screens.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
