@@ -1,0 +1,17 @@
+section {
+  display: none;
+}
+
+#screen-inicio,
+#screen-proyectos,
+#screen-mapa,
+#screen-ide {
+  display: none;
+}
+
+#screen-inicio.active,
+#screen-proyectos.active,
+#screen-mapa.active,
+#screen-ide.active {
+  display: block;
+}
