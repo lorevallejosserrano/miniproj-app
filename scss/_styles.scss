@@ -1,0 +1,16 @@
+@import 'variables/colors';
+@import 'variables/fonts';
+@import 'variables/queries';
+
+@import 'vendors/bootstrap.min';
+@import 'vendors/splide.min';
+
+@import 'global';
+
+@import 'layout/screens';
+@import 'layout/mapa';
+
+@import 'components/buttons';
+@import 'components/etapas';
+@import 'components/breadcrumb';
+@import 'components/editor';

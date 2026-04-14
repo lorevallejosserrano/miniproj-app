@@ -2,57 +2,93 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App JS</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-light">
 
   <!-- BREADCRUMB -->
-  <nav id="breadcrumb"></nav>
+  <nav id="breadcrumb" class="container py-3"></nav>
 
   <!-- INICIO -->
-  <section id="screen-inicio">
+  <section id="screen-inicio" class="active container py-5">
     <h1>Bienvenida</h1>
-    <button id="btn-comenzar">Comenzar</button>
+    <button type="button" id="btn-comenzar" class="btn btn-comenzar">Comenzar</button>
   </section>
 
-  <!-- PROYECTOS -->
-  <section id="screen-proyectos" style="display:none;">
+  <!-- MINIPROYECTOS -->
+  <section id="screen-proyectos" class="container py-5">
     <h2>Miniproyectos</h2>
 
-    <button id="btn-reset">Resetear progreso</button>
+    <button type="button" id="btn-reset" class="btn btn-reset">Resetear progreso</button>
 
-    <div>
-      <button class="btn-proyecto" data-id="1">Proyecto 1</button>
-      <button class="btn-proyecto" data-id="2">Proyecto 2</button>
+    <div class="project-list">
+      <button type="button" class="btn btn-proyecto" data-id="1">Proyecto 1</button>
+      <button type="button" class="btn btn-proyecto" data-id="2">Proyecto 2</button>
     </div>
   </section>
 
-  <!-- MAPA -->
-  <section id="screen-mapa" style="display:none;">
-    <h2>Mapa</h2>
-    <div id="lista-etapas">
-      <button class="btn-etapa" data-id="1">Etapa 1</button>
-      <button class="btn-etapa" data-id="2">Etapa 2</button>
+  <!-- MAPA DEL PROYECTO -->
+  <section id="screen-mapa" class="container py-5">
+    <h2>Proyecto 1</h2>
+
+    <div class="project-progress">
+      <div class="project-progress__top">
+        <span class="project-progress__label">Progreso del proyecto</span>
+        <span id="project-progress-value" class="project-progress__value">0%</span>
+      </div>
+
+      <div class="project-progress__bar">
+        <div id="project-progress-fill" class="project-progress__fill"></div>
+      </div>
+    </div>
+
+    <div id="lista-etapas" class="stage-list">
+      <button type="button" class="btn btn-etapa" data-id="1">Etapa 1</button>
+      <button type="button" class="btn btn-etapa" data-id="2">Etapa 2</button>
     </div>
   </section>
 
-  <!-- IDE -->
-  <section id="screen-ide" style="display:none;">
+  <!-- ETAPA / IDE -->
+  <section id="screen-ide" class="container py-4">
     <h2>IDE</h2>
 
-    <p id="instruccion"></p>
-    <textarea id="editor-html" placeholder="HTML"></textarea>
-    <textarea id="editor-css" placeholder="CSS"></textarea>
-    <textarea id="editor-js" placeholder="JavaScript"></textarea>
+    <div class="ide-header">
+      <p id="instruccion"></p>
+    </div>
 
-    <button id="btn-ejecutar">Ejecutar</button>
+    <div class="ide-body">
+      <div class="ide-editors">
+        <div class="editor-group">
+          <label class="editor-label" for="editor-html">HTML</label>
+          <textarea id="editor-html" placeholder="HTML"></textarea>
+        </div>
 
-    <iframe id="preview"></iframe>
+        <div class="editor-group">
+          <label class="editor-label" for="editor-css">CSS</label>
+          <textarea id="editor-css" placeholder="CSS"></textarea>
+        </div>
 
-    <button id="btn-validar">Validar</button>
-    <p id="resultado"></p>
-    <button id="btn-volver">Volver</button>
+        <div class="editor-group">
+          <label class="editor-label" for="editor-js">JavaScript</label>
+          <textarea id="editor-js" placeholder="JavaScript"></textarea>
+        </div>
+      </div>
+
+      <div class="ide-preview">
+        <label class="editor-label" for="preview">Vista previa</label>
+        <iframe id="preview" title="Vista previa del ejercicio"></iframe>
+      </div>
+    </div>
+
+    <div class="ide-actions">
+      <button type="button" id="btn-ejecutar" class="btn btn-ejecutar">Ejecutar</button>
+      <button type="button" id="btn-validar" class="btn btn-validar">Validar</button>
+      <button type="button" id="btn-volver" class="btn btn-volver">Volver</button>
+    </div>
+
+    <p id="resultado" aria-live="polite"></p>
   </section>
 
   <script src="js/screens.js"></script>
